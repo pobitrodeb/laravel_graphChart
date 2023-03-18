@@ -13,5 +13,8 @@ use App\Http\Controllers\ChartJSController;
 |
 */
 
-Route::get('/', [ChartJSController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('chart', [ChartJSController::class, 'index']);
 
